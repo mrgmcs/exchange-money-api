@@ -29,13 +29,13 @@ class USD_Adapter:
         self.new_url = ""
 
     def exchange_with_api(self):
-        if self.format["from"] == "USD" and self.format["to"] != "USD":
-            self.new_url = url.format(app_id, "USD", self.format["to"])
-            response = requests.get(self.new_url, headers=headers)
+        # if self.format["from"] == "USD" and self.format["to"] != "USD":
+        #     self.new_url = url.format(app_id, "USD", self.format["to"])
+        #     response = requests.get(self.new_url, headers=headers)
 
-        elif self.format["from"] != "USD" and self.format["from"] == "USD":
-            self.new_url = url.format(app_id, "USD", self.format["from"])
-            response = requests.get(self.new_url, headers=headers)
+        # elif self.format["from"] != "USD" and self.format["from"] == "USD":
+        #     self.new_url = url.format(app_id, "USD", self.format["from"])
+        #     response = requests.get(self.new_url, headers=headers)
         to = self.format["to"] if self.format["to"] != "USD" else self.format["from"]
         json_rate =self.format["to"] if self.format["to"] != "USD" else self.format["from"]
         #json_rate = self.format["to"] if self.format["to"] !="USD" els
