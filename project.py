@@ -23,7 +23,7 @@ class data:
         self.from_cu = from_cu
         self.to_cu = to_cu
 
-class USD_Adapter:
+class USD_caller:
     def __init__(self, format):
         self.format = format
         self.new_url = ""
@@ -61,7 +61,7 @@ class Adapter:
             "to": self.data.to_cu
         }
         #call new class to exchange
-        exchange_data = USD_Adapter(format=changed_format)
+        exchange_data = USD_caller(format=changed_format)
         return exchange_data.exchange_with_api()
 
 #get data from user
